@@ -1,0 +1,424 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Sans", sans-serif;
+  box-sizing: border-box;
+}
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+  url(images/dog-background1.jpg);
+  padding: 2% 6%;
+}
+
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  width: 150px;
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 10px;
+  position: relative;
+}
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 26px;
+}
+.nav-links ul li ::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: rgb(69, 190, 150);
+  display: block;
+  margin: auto;
+  transition: 0.7s;
+}
+.nav-links ul li :hover::after {
+  width: 100%;
+}
+.textbox {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 2% 6%;
+}
+.textbox h1 {
+  font-size: 120px;
+}
+.textbox p {
+  margin: 10px 0 40px;
+  font-size: 35px;
+  color: #999999;
+  font-family: "Zen Old Mincho", serif;
+}
+/*----- welcome -----*/
+
+.welcome {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+h1 {
+  font-size: 60px;
+  font-weight: 600;
+  font-family: "Fira Sans", sans-serif;
+}
+p {
+  color: #777;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.welcome-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+}
+.welcome-col img {
+  width: 100%;
+  border-radius: 10px;
+}
+.welcome-col p {
+  padding: 0;
+}
+.welcome-col h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: left;
+  font-size: 27px;
+}
+
+/*-------- trainers --------*/
+
+.trainer {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+.trainer-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.trainer-col img {
+  width: 100%;
+  border-radius: 10px;
+  display: inline-block;
+}
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.7s;
+}
+.layer:hover {
+  background: rgba(79, 194, 156, 0.5);
+}
+.layer h3 {
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 26px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.75s;
+}
+.layer:hover h3 {
+  top: 50%;
+  opacity: 1;
+}
+
+/*-------- PriceTable --------*/
+.price {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.price-table {
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555555;
+  margin: 15px;
+  flex-basis: 27%;
+}
+
+.price-table-header {
+  padding: 25px;
+  background: #009578;
+  color: #ffffff;
+}
+.price-table-title {
+  margin: 0;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+.price-table-description {
+  padding: 25px;
+}
+.price-table-list {
+  padding: 0;
+  margin: 0;
+}
+.price-table-feature {
+  list-style: none;
+  margin: 0;
+  padding-left: 25px;
+  position: relative;
+  font-size: 1.1em;
+}
+.price-table-feature-remove {
+  text-decoration: line-through;
+  list-style: none;
+  margin: 0;
+  padding-left: 25px;
+  position: relative;
+  font-size: 1.1em;
+}
+.price-table-feature:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+.price-table-feature::before {
+  content: "\2714";
+  color: #009578;
+  left: 0;
+  position: absolute;
+}
+.price-table-feature-remove:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+.price-table-feature-remove::before {
+  content: "\2714";
+  color: #009578;
+  left: 0;
+  position: absolute;
+}
+.price-table-action {
+  padding: 25px;
+  border-top: 1px solid #eeeeee;
+  display: flex;
+  flex-direction: column;
+}
+.price-table-button {
+  display: inline-block;
+  margin: 15px auto;
+  padding: 8px 20px;
+  text-decoration: none;
+  color: #009578;
+  background: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #009578;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.price-table-button:hover {
+  background: #009578;
+  color: #ffffff;
+}
+.price-table-cost {
+  margin: 0;
+  text-align: center;
+  font-size: 2.5em;
+  color: #000000;
+}
+.price-table-text {
+  font-size: 1em;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+.price-table-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+/*------ testimonials -------*/
+
+.testimonials {
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  text-align: center;
+}
+.testimonials-col {
+  flex-basis: 44%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  background: #8ce9d6;
+  padding: 25px;
+  cursor: pointer;
+  display: flex;
+}
+.testimonials-col img {
+  height: 60px;
+  margin-left: 5px;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+testimonials-col p {
+  padding: 0;
+}
+testimonials-col h3 {
+  margin-top: 15px;
+  text-align: left;
+}
+.testimonials-col .fa {
+  color: #f44336;
+}
+
+/*---------- Contact Box ---------*/
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px;
+}
+
+.container:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("images/dog-background.jpg") no-repeat center;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(50px);
+}
+.contact-box {
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.2);
+}
+
+.left {
+  height: 100%;
+  background: url("images/dog-background.jpg") no-repeat center;
+  background-size: cover;
+}
+.right {
+  padding: 25px 40px;
+}
+h2 {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+h2:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: #2ecc71;
+}
+
+.field {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 2px solod rgba(0, 0, 0, 0);
+  background-color: rgba(230, 230, 230, 0.6);
+  font-size: 1.1 rem;
+  margin-bottom: 22px;
+  transition: 0.3s;
+}
+
+.field:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.field:focus {
+  background-color: #fff;
+  border: 2px solid rgba(33, 177, 122, 0.5);
+}
+
+.area {
+  min-height: 150px;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  background-color: #2ecc71;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #27ae60;
+}
+
+@media screen and (max-width: 880px) {
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+  .left {
+    height: 200px;
+  }
+}
